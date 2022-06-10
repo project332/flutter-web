@@ -15,6 +15,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     hosting:
       name: FLutter web app build
+      needs: sonarcloud
       runs-on: ubuntu-latest
       steps:
         # Checkout Repository
